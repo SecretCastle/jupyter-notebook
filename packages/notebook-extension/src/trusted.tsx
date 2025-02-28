@@ -79,6 +79,7 @@ const TrustedButton = ({
           : trans.__('JavaScript disabled for notebook display')
       }
     >
+      <span>Hello Jupyter</span>
       {trusted ? trans.__('Trusted') : trans.__('Not Trusted')}
     </button>
   );
@@ -102,7 +103,7 @@ export namespace TrustedComponent {
     translator: ITranslator;
   }): ReactWidget => {
     return ReactWidget.create(
-      <TrustedButton notebook={notebook} translator={translator} />
+      <TrustedButton notebook={notebook} translator={translator} />,
     );
   };
 }
